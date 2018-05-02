@@ -7,7 +7,7 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="220.0" prefWidth="320" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
+<AnchorPane id="AnchorPane" prefHeight="213.0" prefWidth="452.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="br.edu.ifro.MenuPrincipalController">
     <children>
       <Label layoutX="24.0" layoutY="28.0" text="Valor 1 " />
       <TextField fx:id="txtNumero1" layoutX="24.0" layoutY="45.0" />
@@ -15,10 +15,20 @@
       <TextField fx:id="txtNumero2" layoutX="24.0" layoutY="93.0" />
       <Label layoutX="26.0" layoutY="125.0" text="Resultado" />
       <TextField fx:id="txtResultado" layoutX="24.0" layoutY="147.0" />
-      <Button layoutX="205.0" layoutY="24.0" mnemonicParsing="false" onAction="#Multiplicar" text="Multiplicar" />
+      <Button layoutX="205.0" layoutY="33.0" mnemonicParsing="false" onAction="#Multiplicar" text="Multiplicar" />
       <Button fx:id="Somar" layoutX="205.0" layoutY="64.0" mnemonicParsing="false" onAction="#somar" text="Somar" />
       <Button fx:id="Subtrair" layoutX="205.0" layoutY="100.0" mnemonicParsing="false" onAction="#Subtrair" text="Subtrair" />
       <Button fx:id="Dividir" layoutX="205.0" layoutY="135.0" mnemonicParsing="false" onAction="#Dividir" text="Dividir" />
       <Button layoutX="205.0" layoutY="172.0" mnemonicParsing="false" onAction="#Limpar" text="Limpar" />
+      <MenuBar layoutX="1.0" layoutY="2.0" prefHeight="25.0" prefWidth="452.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="Cadastros">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#abrirCadastroAluno" text="Alunos" />
+                  <MenuItem mnemonicParsing="false" onAction="#FecharProjeto" text="Fechar" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
     </children>
 </AnchorPane>
