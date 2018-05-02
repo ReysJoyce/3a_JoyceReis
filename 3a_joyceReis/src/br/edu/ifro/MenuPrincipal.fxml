@@ -14,7 +14,7 @@
       <Label layoutX="24.0" layoutY="76.0" text="Valor 2" />
       <TextField fx:id="txtNumero2" layoutX="24.0" layoutY="93.0" />
       <Label layoutX="26.0" layoutY="125.0" text="Resultado" />
-      <TextField layoutX="24.0" layoutY="147.0" />
+      <TextField fx:id="txtResultado" layoutX="24.0" layoutY="147.0" />
       <Button layoutX="205.0" layoutY="24.0" mnemonicParsing="false" onAction="#Multiplicar" text="Multiplicar" />
       <Button fx:id="Somar" layoutX="205.0" layoutY="64.0" mnemonicParsing="false" onAction="#somar" text="Somar" />
       <Button fx:id="Subtrair" layoutX="205.0" layoutY="100.0" mnemonicParsing="false" onAction="#Subtrair" text="Subtrair" />
