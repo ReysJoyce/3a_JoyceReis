@@ -11,6 +11,7 @@ import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
+import javafx.scene.control.TextField;
 
 /**
  *
@@ -18,13 +19,59 @@ import javafx.scene.control.Label;
  */
 public class MenuPrincipalController implements Initializable {
     
+   
+    @FXML
+    private TextField txtNumero1, txtNumero2, txtResultado;
+            
     @FXML
     private Label label;
     
+   
+    
     @FXML
-    private void handleButtonAction(ActionEvent event) {
-        System.out.println("You clicked me!");
-        label.setText("Hello World!");
+    private void somar(ActionEvent event) {
+      Double num1 = Double.parseDouble(txtNumero1.getText());
+      Double num2 = Double.parseDouble(txtNumero2.getText());
+      Double resultado = num1 + num2;
+      
+      txtResultado.setText(resultado.toString());
+    }
+    
+     @FXML
+    private void Dividir(ActionEvent event){
+      Double num1 = Double.parseDouble(txtNumero1.getText());
+      Double num2 = Double.parseDouble(txtNumero2.getText());
+      Double resultado = num1 / num2;
+      
+      txtResultado.setText(resultado.toString());
+     
+    }
+    @FXML
+    private void Multiplicar(ActionEvent event){
+      Double num1 = Double.parseDouble(txtNumero1.getText());
+      Double num2 = Double.parseDouble(txtNumero2.getText());
+      Double resultado = num1 * num2;
+      
+      txtResultado.setText(resultado.toString());
+     
+    }
+    
+    @FXML
+    private void Subtrair(ActionEvent event){
+      Double num1 = Double.parseDouble(txtNumero1.getText());
+      Double num2 = Double.parseDouble(txtNumero2.getText());
+      Double resultado = num1 - num2;
+      
+      txtResultado.setText(resultado.toString());
+     
+    }
+    
+    @FXML
+    private void Limpar(ActionEvent event){
+      txtNumero1.setText("");
+      txtNumero2.setText("");
+      txtResultado.setText("");
+     
     }
     
     @Override
