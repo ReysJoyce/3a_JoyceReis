@@ -5,23 +5,52 @@
  */
 package br.edu.ifro;
 
+import br.edu.ifro.modelo.Aluno;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
+import javafx.stage.Stage;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
 
-/**
- * FXML Controller class
- *
- * @author Amanda Reis
- */
+
 public class AlunoController implements Initializable {
 
-    /**
-     * Initializes the controller class.
-     */
+    @FXML
+    private Button txtNome;
+    @FXML
+    private Button btnFechar;
+
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
+
+    @FXML
+    private void Salvar(ActionEvent event) {
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("Aula");
+        EntityManager em = emf.createEntityManager();
+        
+         Aluno aluno1 = new Aluno();
+         aluno1.setNome (txtNome.getText());
+         
+         em.getTransaction().begin();
+         em.persist(aluno1);
+         em.getTransaction().commit();
+        
+    }
+
+    @FXML
+    private void Fechar(ActionEvent event) {
+        Stage stage = (Stage) btnFechar.getScene().getWindow();
+        stage.close();
+    }
+
+   
     
 }
